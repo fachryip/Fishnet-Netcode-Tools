@@ -1,0 +1,20 @@
+{
+  "name": "com.fachryip.fishnet-network-tools",
+  "version": "0.1.0",
+  "displayName": "FishNet Network Tools",
+  "description": "A real-time network inspector for FishNet (Fish-Networking) in Unity. View live spawned NetworkObjects, ownership, observers, and SyncVar/SyncType values from the editor while you play.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Fachry Ichsan Putra",
+    "url": "https://github.com/fachryip"
+  },
+  "license": "MIT",
+  "keywords": [
+    "fishnet",
+    "fish-networking",
+    "networking",
+    "multiplayer",
+    "debugging",
+    "inspector"
+  ]
+}
