@@ -46,7 +46,7 @@ Use the two halves together. Inject a bad condition and watch, in the inspector,
 ## Requirements
 
 - Unity <!-- TODO: confirm and pin the minimum supported LTS version -->
-- FishNet (Fish-Networking) <!-- TODO: confirm and pin the tested version range -->
+- FishNet (Fish-Networking): verified on 4.7.2. Other 4.x versions may work; the inspector degrades gracefully if the SyncType API differs.
 
 ## Installation
 

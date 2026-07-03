@@ -20,7 +20,7 @@ namespace FishNetNetworkTools
     /// the user's compile (which would take down the object tree too). Only <see cref="NetworkBehaviour"/>,
     /// the central stable type, is referenced directly.
     ///
-    /// Verified against FishNet 4.6.12:
+    /// Verified against FishNet 4.7.2:
     ///   SyncBase  : FishNet.Object.Synchronizing.Internal.SyncBase   (public base of all SyncTypes)
     ///   SyncVar   : FishNet.Object.Synchronizing.SyncVar&lt;T&gt;     — public T Value { get; } (no side effects)
     ///   SyncList / SyncDictionary / SyncHashSet                       — public int Count { get; }
@@ -30,7 +30,7 @@ namespace FishNetNetworkTools
     public static class SyncTypeAdapter
     {
         // --- Tested FishNet surface, matched as strings so an API change degrades instead of failing to compile ---
-        private const string TestedFishNetVersion = "4.6.12";
+        private const string TestedFishNetVersion = "4.7.2";
         private const string FishNetRuntimeAssembly = "FishNet.Runtime";
         private const string SyncBaseTypeName = "FishNet.Object.Synchronizing.Internal.SyncBase";
         private const string SyncVarOpenTypeName = "FishNet.Object.Synchronizing.SyncVar`1";
@@ -187,7 +187,7 @@ namespace FishNetNetworkTools
             }
             catch (Exception ex)
             {
-                // Reading .Value / Count has no side effects in 4.6.12 and is safe pre-spawn, but values
+                // Reading .Value / Count has no side effects and is safe pre-spawn, but values
                 // are reset during despawn — so stay defensive and surface the reason instead of throwing.
                 return new SyncEntry(name, typeName, SyncKind.Unknown, "(read error: " + ex.GetType().Name + ")", -1);
             }
